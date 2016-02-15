@@ -1,0 +1,25 @@
+{
+  "name": "tabcycle",
+  "version": "0.0.1",
+  "description": "```javascript\r $('.container').on('keydown', function(e) {\r     $('.container').tabCycle(e, $(e.target).attr('tabindex'));\r })\r ```",
+  "main": "tabCycle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roydanenterprises/tabCycle.git"
+  },
+  "keywords": [
+    "tabs",
+    "tabindex",
+    "keyboard",
+    "cycling"
+  ],
+  "author": "Roydan Enterprises",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roydanenterprises/tabCycle/issues"
+  },
+  "homepage": "https://github.com/roydanenterprises/tabCycle#readme"
+}
