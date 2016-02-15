@@ -1,7 +1,7 @@
 {
   "name": "tabcycle",
   "version": "0.0.1",
-  "description": "```javascript\r $('.container').on('keydown', function(e) {\r     $('.container').tabCycle(e, $(e.target).attr('tabindex'));\r })\r ```",
+  "description": "A small jQuery plugin that constrains keyboard cycling to a set of like elements.",
   "main": "tabCycle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/roydanenterprises/tabCycle/issues"
   },
-  "homepage": "https://github.com/roydanenterprises/tabCycle#readme"
+  "homepage": "https://github.com/roydanenterprises/tabCycle#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-banner": "^0.1.3",
+    "gulp-minify": "0.0.5"
+  }
 }
