@@ -11,6 +11,26 @@
 (function ($) {
 	//Custom cycling for our application.  This function can be used to cycle focus between different
 	//elements that have the same tab index.
+
+	$.tabCycle = {
+		init : function(element){
+			element.on('keydown', function(e) {
+				$(this).tabCycle(e, $(e.target).attr('tabindex'));
+			});
+		},
+		destroy : function(element){
+			element.off('keydown');
+		},
+		options : {
+			ignoreSelector: ':hidden, :disabled',
+			focusClass: '',
+			focusElement: true,
+			selectAllText: true,
+			stopTabPropagation:true,
+			stopArrowPropagation:true
+		}
+	};
+
 	$.fn.tabCycle = function (event, tabIndex, callback, options) {
 		var keyCodes = {
 			left: 37,
@@ -20,7 +40,7 @@
 			tab: 9
 		};
 
-		var opts = $.extend({}, $.fn.tabCycle.options, options);
+		var opts = $.extend({}, $.tabCycle.options, options);
 		//if we are trying to cycle on a select box with arrow keys do not cycle.
 		if (((event.keyCode === keyCodes.up ||
 			  event.keyCode === keyCodes.down ||
@@ -42,6 +62,7 @@
 		var backwards = (event.shiftKey && event.keyCode === keyCodes.tab) ||
 		  event.keyCode === keyCodes.up ||
 		  event.keyCode === keyCodes.left;
+
 		var elements = this.find('[tabindex=' + tabIndex + ']').not(opts.ignoreSelector);
 
 		if (elements.length === 0) return;
@@ -77,12 +98,13 @@
 
 		//TODO: check if jquery selector is required.
 		// Select all text when tabbed onto
-		if ($(elements[next]).is('input') && opts.selectAllText) {
+		if ($(elements[next]).is('input, textarea')  && opts.selectAllText) {
 			$(elements[next]).select();
 		}
 
 		//This is to prevent the default tab action or bubbling.  we are manually handling it here.
-		if (event.keyCode === keyCodes.tab) {
+		if ((event.keyCode === keyCodes.tab && opts.stopTabPropagation) ||
+			opts.stopArrowPropagation) {
 			event.stopPropagation();
 		}
 
@@ -94,12 +116,4 @@
 			callback(elements[next], focusedCyleElement);
 		}
 	};
-
-	$.fn.tabCycle.options = {
-		ignoreSelector: ':hidden, .is-disabled, .is-not-actionable',
-		focusClass: 'is-focused',
-		focusElement: true,
-		selectAllText: true
-	};
-
 })(jQuery);
