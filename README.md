@@ -2,6 +2,8 @@
 
 This plugin fills in gaps when creating more complicated tab logic. The out-of-the-box implementation of `tabindex` has no support for scoping the behavior to arbitrary containers. This plugin allows a developer to scope tabbing behavior and confine it to a container (with some advanced functionality to boot). Look at the examples and options for more detail.
 
+![Demo](https://raw.githubusercontent.com/roydanenterprises/tabCycle/develop/tabCycleDemo.gif)
+
 ## Installation
 
 * Include jQuery as a dependency in your solution.
