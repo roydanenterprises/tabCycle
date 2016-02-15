@@ -1,0 +1,30 @@
+{
+  "name": "tabcycle",
+  "version": "1.0.0",
+  "description": "Create scoped tabindex containers using HTML and Javascript.",
+  "main": "tabCycle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roydanenterprises/tabCycle.git"
+  },
+  "keywords": [
+    "tabs",
+    "tabindex",
+    "keyboard",
+    "cycling"
+  ],
+  "author": "Roydan Enterprises",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roydanenterprises/tabCycle/issues"
+  },
+  "homepage": "https://github.com/roydanenterprises/tabCycle#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-banner": "^0.1.3",
+    "gulp-minify": "0.0.5"
+  }
+}
