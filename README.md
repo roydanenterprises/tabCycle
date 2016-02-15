@@ -1,14 +1,14 @@
 # jQuery Tab Cycle
 
-
+This plugin fills in gaps when creating more complicated tab logic. The out-of-the-box implementation of `tabindex` has no support for scoping the behavior to arbitrary containers. This plugin allows a developer to scope tabbing behavior and confine it to a container (with some advanced functionality to boot). Look at the examples and options for more detail.
 
 ## Installation
 
 * Include jQuery as a dependency in your solution.
-* Include `./dist/tabCycle-min.js` in your solution.
+* Include `./dist/tabCycle-min.js` in your solution. **Only 2kb minified.**
 
 ## Usage
- A complete set of live examples can be found at  [codepen](http://codepen.io/bmuenzenmeyer/pen/f7cc6b605e3d6cf477ad2b3f0c6e422d)
+ A more complete set of live examples can be found on  [codepen](http://codepen.io/bmuenzenmeyer/pen/f7cc6b605e3d6cf477ad2b3f0c6e422d)
 
 **HTML**
 ```html
@@ -55,3 +55,9 @@ $.tabCycle.options = {
  * Default: `true`
 * `stopArrowPropagation` - Indicates if `e.stopPropagation()` should be called when cycling that was triggered by the `ARROW` keypress.
   * Default: `true`
+
+
+  ## Tested
+
+  * Latest Chrome
+  * TBD

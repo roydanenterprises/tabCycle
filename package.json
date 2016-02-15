@@ -1,7 +1,7 @@
 {
   "name": "tabcycle",
-  "version": "0.0.1",
-  "description": "A small jQuery plugin that constrains keyboard cycling to a set of like elements.",
+  "version": "1.0.0",
+  "description": "Create scoped tabindex containers using HTML and Javascript.",
   "main": "tabCycle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

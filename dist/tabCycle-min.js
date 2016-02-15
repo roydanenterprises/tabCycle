@@ -1,6 +1,6 @@
 /*
- * tabcycle 0.0.1
- * A small jQuery plugin that constrains keyboard cycling to a set of like elements.
+ * tabcycle 1.0.0
+ * Create scoped tabindex containers using HTML and Javascript.
  * https://github.com/roydanenterprises/tabCycle#readme
  *
  * Copyright 2016, Roydan Enterprises
